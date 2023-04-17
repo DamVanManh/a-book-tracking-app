@@ -13,4 +13,4 @@ Make sure you have node version 14 or higher installed
 `cd` into your root project and run:
 
 - `npm install`
-- `npm start` to run the Express server on port 8081
+- `npm start` to start app
