@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { memo } from "react";
 
 const Book = (props) => {
   const { book, handleChangeBook, shelves } = props;
@@ -49,7 +50,10 @@ const Book = (props) => {
   );
 };
 
-export default Book;
+export default memo(
+  Book,
+  (prevProv, nextProv) => prevProv.book.shelf === nextProv.book.shelf
+);
 
 Book.propTypes = {
   book: PropTypes.object.isRequired,
